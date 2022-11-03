@@ -5,8 +5,7 @@ import { io } from 'socket.io-client';
 let ModalContext = createContext();
 let FixturesContext = createContext();
 
-// let socket = io('https://cali-server.up.railway.app');
-let socket = io('http://localhost:5005');
+let socket = io('https://cali-server.up.railway.app');
 
 const MyContext = ({ children }) => {
 
