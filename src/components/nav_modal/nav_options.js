@@ -4,7 +4,8 @@ import { useFixtureContext } from "../../context";
 import { FlexDiv, ParaWrapper } from '../utils/styled_components';
 
 
-let socket = io(`https://cali-server.up.railway.app`);
+// let socket = io(`https://cali-server.up.railway.app`);
+let socket = io(`http://localhost:5005`);
 
 const NavOptions = ({ event, site, url }) => {
 
