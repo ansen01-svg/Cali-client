@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import { useCalculatorContext } from '../../../context/calculator_context';
 import { oddsConstructor } from '../../utils/calculators';
 import { FlexDiv, ParaWrapper, SpanWrapper } from '../../utils/styled_components';
 
 
-const Fixture = ({ fixture, setOdds }) => {
+const Fixture = ({ fixture }) => {
+
+    const { setOdds } = useCalculatorContext();
 
     const updateOdds = (fixture) => {
         if (fixture.w1 === undefined || fixture.x === undefined || fixture.w2 === undefined) return;

@@ -8,14 +8,11 @@ let bets = {
 }
 
 
-const CalculatorHolder = ({ setOdds, odds }) => {
+const CalculatorHolder = () => {
+
     return (
         <Wrapper>
-            <FootballCalc 
-            bets={bets.football}
-            setOdds={setOdds}
-            odds={odds}
-            />
+            <FootballCalc bets={bets.football} />
         </Wrapper>
     )
 }

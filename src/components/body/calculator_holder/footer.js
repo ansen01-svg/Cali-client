@@ -1,9 +1,13 @@
 import styled from "styled-components";
+import { useCalculatorContext } from '../../../context/calculator_context';
 import { oddsConstructor } from '../../utils/calculators';
 import { FlexDiv, ParaWrapper, SpanWrapper } from '../../utils/styled_components';
 
 
-const Footer = ({ odds, setOdds }) => {
+const Footer = () => {
+
+    const { odds, setOdds } = useCalculatorContext();
+
     return (
         <Wrapper>
             <TotalOddsHolder odds={odds} />

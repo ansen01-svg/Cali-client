@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useModalContext } from "../../context";
+import { useModalContext } from "../../context/modal_context";
 import NavOptions from "./nav_options";
 
 

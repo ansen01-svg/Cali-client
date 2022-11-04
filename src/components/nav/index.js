@@ -6,6 +6,7 @@ import Tab from './tabs';
 
 
 const Nav = () => {
+
     return (
         <Wrapper>
             <Logo />

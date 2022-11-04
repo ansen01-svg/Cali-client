@@ -1,34 +1,20 @@
-import { useState } from 'react';
 import styled from 'styled-components';
-import { useFixtureContext } from '../../context';
+import { useFixtureContext } from '../../context/fixture_context';
 import { H1Wrapper } from '../utils/styled_components';
 import CalculatorHolder from './calculator_holder';
 import FixturesHolder from './fixtures_holder';
 import Header from './header';
 
 
-let initialState = {
-    w1 : { odd : 0, betAmount : 0, returns : 0 },
-    x : { odd : 0, betAmount : 0, returns : 0 },
-    w2 : { odd : 0, betAmount : 0, returns : 0 },
-    totalOdds : 0,
-    totalAmount : 0
-}
-
 const Body = () => {
 
     const { error } = useFixtureContext()
-
-    let [odds, setOdds] = useState(initialState)
 
     if (error.error) {
         return <Error error={error.msg} />
     }
     
-    return <Main 
-    setOdds={setOdds}
-    odds={odds}
-    />
+    return <Main />
 }
 
 const Error = ({error}) => {
@@ -41,17 +27,12 @@ const Error = ({error}) => {
     )
 }
 
-const Main = ({ setOdds, odds }) => {
+const Main = () => {
     return (
         <Wrapper>
             <Header />
-            <FixturesHolder 
-            setOdds={setOdds}
-            />
-            <CalculatorHolder
-            setOdds={setOdds}
-            odds={odds}
-            />
+            <FixturesHolder />
+            <CalculatorHolder />
         </Wrapper>
     )
 }

@@ -2,19 +2,11 @@ import { createContext, useContext, useEffect, useState } from 'react';
 import { io } from 'socket.io-client';
 
 
-let ModalContext = createContext();
 let FixturesContext = createContext();
 
-// let socket = io('https://cali-server.up.railway.app');
 let socket = io('http://localhost:5005');
 
 const MyContext = ({ children }) => {
-
-    let [modalData, setModalData] = useState({
-        show : false,
-        site : '',
-        info : []
-      })
 
     let [isLoading, setIsLoading] = useState(true);
     let [error, setError] = useState({ error : false, msg : '' })
@@ -47,22 +39,13 @@ const MyContext = ({ children }) => {
     }
 
     return (
-        <ModalContext.Provider 
-        value={{ modalData, setModalData }}
-        >
             <FixturesContext.Provider 
             value={{ isLoading, setIsLoading, error, setError, 
             fixtures, setFixtures}}
             >
                 {children}
             </FixturesContext.Provider>
-        </ModalContext.Provider>
     )
-}
-
-
-export const useModalContext = () => {
-    return useContext(ModalContext);
 }
 
 export const useFixtureContext = () => {

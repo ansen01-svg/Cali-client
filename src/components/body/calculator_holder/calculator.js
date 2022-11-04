@@ -5,13 +5,13 @@ import Main from "./main";
 import Panel from "./panel";
 
 
-const FootballCalc = ({ bets, setOdds, odds }) => {   
+const FootballCalc = ({ bets }) => {   
     return (
         <FootballCalcWrapper>
             <Header title='CALCULATOR' />
             <Panel bets={bets} />
-            <Main odds={odds} />
-            <Footer odds={odds} setOdds={setOdds} />
+            <Main />
+            <Footer />
         </FootballCalcWrapper>
     )
 }

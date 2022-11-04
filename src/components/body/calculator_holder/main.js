@@ -1,10 +1,14 @@
 import styled from "styled-components";
+import { useCalculatorContext } from '../../../context/calculator_context';
 import { FlexDiv, ParaWrapper } from '../../utils/styled_components';
 
 
 const titles = ['Odds', 'Bet amount', 'Returns']
 
-const Main = ({ odds }) => {
+const Main = () => {
+
+    let { odds } = useCalculatorContext();
+
     return (
         <Wrapper>
             <Titles />

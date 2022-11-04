@@ -1,6 +1,6 @@
 import { AiOutlineCaretDown } from "react-icons/ai";
 import styled from "styled-components";
-import { useModalContext } from "../../context";
+import { useModalContext } from "../../context/modal_context";
 import NavModal from '../nav_modal';
 import { ParaWrapper } from '../utils/styled_components';
 import { Wrapper } from "./logo";

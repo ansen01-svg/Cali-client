@@ -1,11 +1,11 @@
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import styled from "styled-components";
-import { useFixtureContext } from "../../../context";
+import { useFixtureContext } from "../../../context/fixture_context";
 import Fixture from "./fixture";
 import Header from "./header";
 
 
-const FixturesHolder = ({ setOdds }) => {
+const FixturesHolder = () => {
 
     const { fixtures, isLoading } = useFixtureContext();
 
@@ -17,7 +17,7 @@ const FixturesHolder = ({ setOdds }) => {
         <Wrapper>
             <Header />
             {
-                fixtures.fixtures.map(item => <Fixture  key={item.id} fixture={item} setOdds={setOdds} /> )
+                fixtures.fixtures.map(item => <Fixture  key={item.id} fixture={item} /> )
             }
         </Wrapper>
     )
