@@ -9,7 +9,6 @@ import MyModalContext from './context/modal_context';
 const App = () => {
   return (
     <div className="App">
-    <div className="App">
       <MyFixtureContext>
         <MyModalContext>
           <Nav />
@@ -19,7 +18,6 @@ const App = () => {
         </MyCalculatorContext>
       </MyFixtureContext>
       <Footer />
-    </div>
     </div>
   );
 }
