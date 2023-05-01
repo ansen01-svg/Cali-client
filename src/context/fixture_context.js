@@ -4,7 +4,7 @@ import { io } from 'socket.io-client';
 
 let FixturesContext = createContext();
 
-let socket = io('https://cali-server-production.up.railway.app');
+let socket = io('http://localhost:5005');
 
 const MyContext = ({ children }) => {
 
