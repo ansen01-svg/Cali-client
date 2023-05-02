@@ -6,7 +6,7 @@ const Logo = () => {
     return (
         <Wrapper>
             <H1Wrapper color='#f5f5f5' padding='0 20px'>
-                CALI
+                CALLI
             </H1Wrapper>
         </Wrapper>
     )
