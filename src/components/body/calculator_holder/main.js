@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useCalculatorContext } from '../../../context/calculator_context';
-import { FlexDiv, ParaWrapper } from '../../utils/styled_components';
+import { FlexDiv, ParaWrapper } from '../../component_utils/styled_components';
 
 
 const titles = ['Odds', 'Bet amount', 'Returns']

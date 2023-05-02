@@ -1,7 +1,7 @@
 import { io } from 'socket.io-client';
 import styled from 'styled-components';
 import { useFixtureContext } from "../../context/fixture_context";
-import { FlexDiv, ParaWrapper } from '../utils/styled_components';
+import { FlexDiv, ParaWrapper } from '../component_utils/styled_components';
 
 
 let socket = io(`http://localhost:5005`);

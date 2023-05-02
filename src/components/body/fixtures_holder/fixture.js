@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useCalculatorContext } from '../../../context/calculator_context';
-import { oddsConstructor } from '../../utils/calculators';
-import { FlexDiv, ParaWrapper, SpanWrapper } from '../../utils/styled_components';
+import { oddsConstructor } from '../../component_utils/calculators';
+import { FlexDiv, ParaWrapper, SpanWrapper } from '../../component_utils/styled_components';
 
 
 const Fixture = ({ fixture }) => {

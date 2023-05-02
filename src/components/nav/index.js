@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import data from '../../utils/data';
-import { FlexDiv } from '../utils/styled_components';
+import { FlexDiv } from '../component_utils/styled_components';
 import Logo from './logo';
 import Tab from './tabs';
 
