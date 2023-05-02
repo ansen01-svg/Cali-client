@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useFixtureContext } from '../../context/fixture_context';
-import { H1Wrapper } from '../utils/styled_components';
+import { H1Wrapper } from '../component_utils/styled_components';
 import CalculatorHolder from './calculator_holder';
 import FixturesHolder from './fixtures_holder';
 import Header from './header';

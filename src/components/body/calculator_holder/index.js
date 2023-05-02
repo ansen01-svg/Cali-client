@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FlexDiv } from '../../utils/styled_components';
+import { FlexDiv } from '../../component_utils/styled_components';
 import FootballCalc from "./calculator";
 
 let bets = {

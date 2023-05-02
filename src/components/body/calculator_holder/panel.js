@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FlexDiv, ParaWrapper } from '../../utils/styled_components';
+import { FlexDiv, ParaWrapper } from '../../component_utils/styled_components';
 
 
 const Panel = ({ bets }) => {

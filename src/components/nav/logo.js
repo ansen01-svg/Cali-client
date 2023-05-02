@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FlexDiv, H1Wrapper } from '../utils/styled_components';
+import { FlexDiv, H1Wrapper } from '../component_utils/styled_components';
 
 
 const Logo = () => {

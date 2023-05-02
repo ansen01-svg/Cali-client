@@ -1,7 +1,7 @@
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import styled from "styled-components";
 import { useFixtureContext } from "../../context/fixture_context";
-import { FlexDiv, H1Wrapper, ParaWrapper, SpanWrapper } from '../utils/styled_components';
+import { FlexDiv, H1Wrapper, ParaWrapper, SpanWrapper } from '../component_utils/styled_components';
 
 
 const Header = () => {
