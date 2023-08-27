@@ -1,10 +1,9 @@
-import Body from './components/body';
-import Footer from './components/footer';
-import Nav from './components/nav';
-import MyCalculatorContext from './context/calculator_context';
-import MyFixtureContext from './context/fixture_context';
-import MyModalContext from './context/modal_context';
-
+import Body from "./components/body";
+import Footer from "./components/footer";
+import Nav from "./components/nav";
+import MyCalculatorContext from "./context/calculator_context";
+import MyFixtureContext from "./context/fixture_context";
+import MyModalContext from "./context/modal_context";
 
 const App = () => {
   return (
@@ -20,7 +19,6 @@ const App = () => {
       <Footer />
     </div>
   );
-}
-
+};
 
 export default App;
