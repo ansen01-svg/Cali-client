@@ -4,7 +4,9 @@ import { FlexDiv, ParaWrapper } from "../component_utils/styled_components";
 const Footer = () => {
   return (
     <FooterWrapper>
-      <ParaWrapper fontSize="0.6rem">Bet at your own risk.</ParaWrapper>
+      <ParaWrapper fontSize="0.6rem">
+        &copy; 2023. All rights reserved.
+      </ParaWrapper>
     </FooterWrapper>
   );
 };
