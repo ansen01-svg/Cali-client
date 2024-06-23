@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <ParaWrapper fontSize="0.6rem">
-        &copy; 2023. All rights reserved.
+        &copy; 2023. Cali. All rights reserved.
       </ParaWrapper>
     </FooterWrapper>
   );
