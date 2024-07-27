@@ -5,7 +5,7 @@
   --green: #71b77e;
   --yellow: #f2cd5f;
   --light-blue: #73c3ce;
-  --orange: #f29940;
+  --orange: #271b0f;
   --purple: #7e85cd;
   --mauve: #cf96c2;
   --light-blue2: #6ea2dd;
@@ -28,18 +28,16 @@
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  color: white;
   background-color: var(--gray);
-  overflow-x: hidden;
 }
 h1,
 h2 {
-  color: white;
   font-family: Poppins, sans-serif;
   font-weight: bolder;
 }
 p,
 a {
-  color: white;
   font-family: Poppins, sans-serif;
+  text-decoration: none;
 }

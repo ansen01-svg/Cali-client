@@ -11,7 +11,7 @@ const Header = ({ title }) => {
 
 const HeadWrapper = styled(FlexDiv)`
   height: 45px;
-  padding: 0 1vw;
+  padding: 0 10px;
   justify-content: flex-start;
   background: black;
 `;

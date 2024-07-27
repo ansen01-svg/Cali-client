@@ -20,9 +20,8 @@ const NavModal = () => {
 };
 
 const ModalWrapper = styled.div`
-  width: 100vw;
-  max-width: 100vw;
-  height: 60px;
+  width: 100%;
+  height: 62px;
   background-color: #292929;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -32,7 +31,7 @@ const ModalWrapper = styled.div`
   position: fixed;
   top: calc(60px - 0.25rem - 0.1rem);
   left: 0;
-  z-index: 5;
+  z-index: 50;
 `;
 
 export default NavModal;

@@ -1,24 +1,36 @@
 import Body from "./components/body";
 import Footer from "./components/footer";
-import Nav from "./components/nav";
+import NavBar from "./components/nav";
 import MyCalculatorContext from "./context/calculator_context";
 import MyFixtureContext from "./context/fixture_context";
 import MyModalContext from "./context/modal_context";
+import styled from "styled-components";
 
 const App = () => {
   return (
-    <div className="App">
+    <AppWrapper>
       <MyFixtureContext>
         <MyModalContext>
-          <Nav />
+          <NavBar />
         </MyModalContext>
         <MyCalculatorContext>
-          <Body />
+          <MainWrapper>
+            <Body />
+          </MainWrapper>
         </MyCalculatorContext>
       </MyFixtureContext>
       <Footer />
-    </div>
+    </AppWrapper>
   );
 };
+
+const AppWrapper = styled.div`
+  width: calc(10vw + 682px + 341px + 10vw + 50px);
+  overflow-x: "auto";
+`;
+
+const MainWrapper = styled.div`
+  width: 100%;
+`;
 
 export default App;

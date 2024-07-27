@@ -4,7 +4,7 @@ import { FlexDiv, ParaWrapper } from "../component_utils/styled_components";
 const Footer = () => {
   return (
     <FooterWrapper>
-      <ParaWrapper fontSize="0.6rem">
+      <ParaWrapper fontSize="0.7rem">
         &copy; 2023. Cali. All rights reserved.
       </ParaWrapper>
     </FooterWrapper>
@@ -12,8 +12,7 @@ const Footer = () => {
 };
 
 const FooterWrapper = styled(FlexDiv)`
-  width: 100vw;
-  max-width: 100vw;
+  width: 100%;
   height: 150px;
   background-color: black;
   flex-direction: column;

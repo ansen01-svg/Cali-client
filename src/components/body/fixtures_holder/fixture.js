@@ -103,7 +103,7 @@ const FixtureWrapper = styled(FlexDiv)`
   width: 100%;
   max-width: 100%;
   height: 84px;
-  padding: 0 1vw;
+  padding: 0 10px;
   border-bottom: 1px solid #b5b6ba;
   cursor: pointer;
 `;

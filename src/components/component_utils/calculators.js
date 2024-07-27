@@ -47,7 +47,7 @@ export let oddsConstructor = ({ state, fixture, e }) => {
     return newState;
   }
 
-  let newState = oddsWithoutAmount(state, fixture);
+  let newState = oddsWithoutAmount(state, fixture, e);
   return newState;
 };
 

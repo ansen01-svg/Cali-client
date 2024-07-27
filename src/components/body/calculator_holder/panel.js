@@ -1,14 +1,12 @@
 import styled from "styled-components";
-import { FlexDiv, ParaWrapper } from "../../component_utils/styled_components";
+import { ParaWrapper } from "../../component_utils/styled_components";
 
 const Panel = ({ bets }) => {
   return (
     <PanelWrapper>
       <BetsWrapper>
         {bets.map((bet, index) => (
-          <ParaWrapper key={index} padding="0 1.6vw">
-            {bet}{" "}
-          </ParaWrapper>
+          <ParaWrapper key={index}>{bet} </ParaWrapper>
         ))}
       </BetsWrapper>
     </PanelWrapper>
@@ -16,8 +14,12 @@ const Panel = ({ bets }) => {
 };
 
 const PanelWrapper = styled.div`
+  width: 100%;
   height: 43px;
-  padding: 0 0.8vw;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
   .border {
     width: 100%;
@@ -26,10 +28,13 @@ const PanelWrapper = styled.div`
   }
 `;
 
-const BetsWrapper = styled(FlexDiv)`
-  width: 100%;
+const BetsWrapper = styled.div`
+  // width: 176.16px;
+  width: 160px;
   height: 100%;
-  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export default Panel;

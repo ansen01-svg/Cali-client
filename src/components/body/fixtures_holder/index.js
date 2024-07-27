@@ -1,8 +1,8 @@
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import styled from "styled-components";
 import { useFixtureContext } from "../../../context/fixture_context";
 import Fixture from "./fixture";
 import Header from "./header";
+import Spinner from "../../spinner";
 
 const FixturesHolder = () => {
   const { fixtures, isLoading } = useFixtureContext();
@@ -14,9 +14,11 @@ const FixturesHolder = () => {
   return (
     <Wrapper>
       <Header />
-      {fixtures.fixtures.map((item) => (
-        <Fixture key={item.id} fixture={item} />
-      ))}
+      <div className="fixtures-holder">
+        {fixtures.fixtures.map((item) => (
+          <Fixture key={item.id} fixture={item} />
+        ))}
+      </div>
     </Wrapper>
   );
 };
@@ -24,13 +26,13 @@ const FixturesHolder = () => {
 const Loading = () => {
   return (
     <Wrapper flex setHeight>
-      <AiOutlineLoading3Quarters id="spinner" />
+      <Spinner />
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  width: 50vw;
+  width: 682px;
   height: ${(props) => (props.setHeight ? "100vh" : "")};
   background: #333;
   grid-column: 2/3;
@@ -40,19 +42,8 @@ const Wrapper = styled.div`
   align-items: ${(props) => (props.flex ? "center" : "")};
   justify-content: ${(props) => (props.flex ? "center" : "")};
 
-  #spinner {
-    font-size: 2rem;
-    color: #828282;
-    animation: rotate 1.5s infinite linear;
-
-    @keyframes rotate {
-      0% {
-        transform: rotate(0);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
+  .fixtures-holder {
+    width: 100%;
   }
 `;
 

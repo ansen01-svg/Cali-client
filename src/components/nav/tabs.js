@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { useModalContext } from "../../context/modal_context";
 import { ParaWrapper } from "../component_utils/styled_components";
 import NavModal from "../nav_modal";
-import { Wrapper } from "./logo";
 
 const Tab = ({ data }) => {
   const { setModalData, modalData } = useModalContext();
@@ -37,8 +36,12 @@ const InnerWrapper = ({ data }) => {
   );
 };
 
-const TabsWrapper = styled(Wrapper)`
+const TabsWrapper = styled.div`
+  height: 100%;
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 0 0;
   cursor: pointer;
   overflow-x: hidden;
@@ -49,18 +52,25 @@ const TabsWrapper = styled(Wrapper)`
   &:hover .slider {
     transform: translateX(0);
     transition: all 0.3s linear;
+    padding: 0.2rem 0;
   }
 
   .slider {
     width: 100%;
-    padding: 0.2rem 0;
+    padding: 0;
     background-color: #f0725c;
-    transform: translateX(-100%);
+    transform: translateX(-102%);
     transition: all 0.3s linear;
   }
 `;
 
-const Para = styled(Wrapper)``;
+const Para = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+`;
 
 const Button = styled.button`
   border: none;

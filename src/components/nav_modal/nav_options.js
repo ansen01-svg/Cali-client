@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { useFixtureContext } from "../../context/fixture_context";
 import { FlexDiv, ParaWrapper } from "../component_utils/styled_components";
 
-// let socket = io(`http://localhost:5005`);
-let socket = io(`https://cali-server.onrender.com/`);
+let socket = io(`http://localhost:5005`);
+// let socket = io(`https://cali-server.onrender.com/`);
 
 const NavOptions = ({ event, site, url }) => {
   const { setFixtures, setError, isLoading, setIsLoading } =

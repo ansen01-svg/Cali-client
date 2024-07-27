@@ -1,11 +1,7 @@
 import styled from "styled-components";
 import { useCalculatorContext } from "../../../context/calculator_context";
 import { oddsConstructor } from "../../component_utils/calculators";
-import {
-  FlexDiv,
-  ParaWrapper,
-  SpanWrapper,
-} from "../../component_utils/styled_components";
+import { FlexDiv } from "../../component_utils/styled_components";
 
 const Footer = () => {
   const { odds, setOdds } = useCalculatorContext();
@@ -20,19 +16,16 @@ const Footer = () => {
 
 const TotalOddsHolder = ({ odds }) => {
   return (
-    <ChildWrapper>
-      <ParaWrapper color="#f2cd5f">
-        Total odds :
-        <SpanWrapper
-          paddingLeft="10px"
-          className={`${
-            odds.totalOdds < 1 && odds.totalOdds !== 0 ? "green" : "red"
-          }`}
-        >
-          {odds.totalOdds} %
-        </SpanWrapper>
-      </ParaWrapper>
-    </ChildWrapper>
+    <TotalOddsWrapper>
+      <p>Total odds: </p>
+      <p
+        className={`${
+          odds.totalOdds < 1 && odds.totalOdds !== 0 ? "green" : "red"
+        }`}
+      >
+        {odds.totalOdds} %
+      </p>
+    </TotalOddsWrapper>
   );
 };
 
@@ -44,34 +37,39 @@ const AmountHolder = ({ odds, setOdds }) => {
   };
 
   return (
-    <ChildWrapper justifyContent="flex-end">
-      <ParaWrapper color="#f2cd5f">Amount :</ParaWrapper>
-      <form>
-        <InputWrapper
-          id="amountInput"
-          type="number"
-          placeholder="00:00"
-          name="totalAmount"
-          value={odds.totalAmount}
-          onChange={(e) => handleChange(e)}
-          autoFocus
-        />
-      </form>
-    </ChildWrapper>
+    <AmountHolderWrapper>
+      <p>Amount :</p>
+      <label htmlFor="amountInput">Amount :</label>
+      <input
+        id="amountInput"
+        type="number"
+        placeholder="00"
+        name="totalAmount"
+        value={odds.totalAmount}
+        onChange={(e) => handleChange(e)}
+        autoFocus
+      />
+    </AmountHolderWrapper>
   );
 };
 
 const Wrapper = styled(FlexDiv)`
   height: 58px;
-  padding: 0 1vw;
+  padding: 0 10px;
   border-top: 0.1px solid white;
+  justify-content: space-between;
 `;
 
-const ChildWrapper = styled(FlexDiv)`
-  width: 50%;
-  height: 100%;
-  justify-content: ${(props) => props.justifyContent || "flex-start"};
+const TotalOddsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
+
+  p {
+    font-size: 0.7rem;
+    color: #f2cd5f;
+  }
 
   .green {
     color: #71b77e;
@@ -81,17 +79,40 @@ const ChildWrapper = styled(FlexDiv)`
   }
 `;
 
-export const InputWrapper = styled.input`
-  width: 6vw;
-  height: 30px;
-  background: red;
-  padding-left: 10px;
-  border: 0.1px solid white;
-  outline: none;
-  background: none;
-  color: white;
-  font-family: Poppins, sans-serif;
-  font-size: 0.7rem;
+const AmountHolderWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  p {
+    font-size: 0.7rem;
+    color: #f2cd5f;
+  }
+
+  label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  input {
+    width: 80px;
+    height: 30px;
+    padding-left: 10px;
+    border: 0.1px solid white;
+    outline: none;
+    background: none;
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-size: 0.7rem;
+    z-index: 1;
+  }
 `;
 
 export default Footer;

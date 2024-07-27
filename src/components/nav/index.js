@@ -1,30 +1,28 @@
 import styled from "styled-components";
-import data from "../../utils/data";
 import { FlexDiv } from "../component_utils/styled_components";
 import Logo from "./logo";
-import Tab from "./tabs";
+import Nav from "./nav";
 
-const Nav = () => {
+const NavBar = () => {
   return (
     <Wrapper>
       <Logo />
-      {data.map((item) => (
-        <Tab key={item.id} data={item} />
-      ))}
+      <Nav />
     </Wrapper>
   );
 };
 
 const Wrapper = styled(FlexDiv)`
-  width: 100vw;
-  max-width: 100vw;
+  width: 100%;
   height: 60px;
+  padding: 0 40px;
   background-color: black;
   border-bottom: 0.25rem solid #f0725c;
   justify-content: flex-start;
+  gap: 100px;
   position: sticky;
   top: 0;
   left: 0;
 `;
 
-export default Nav;
+export default NavBar;

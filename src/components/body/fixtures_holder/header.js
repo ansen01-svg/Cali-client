@@ -15,7 +15,7 @@ const Header = () => {
 const Col1Holder = () => {
   return (
     <Col1Wrapper>
-      <ParaWrapper color="black" fontSize="0.9rem">
+      <ParaWrapper color="black" fontSize="0.9rem" fontWeight="bold">
         TEAMS
       </ParaWrapper>
     </Col1Wrapper>
@@ -35,7 +35,7 @@ const Col2Holder = ({ heading }) => {
 const OddsHolder = ({ odd }) => {
   return (
     <HeadingWrapper>
-      <ParaWrapper color="black" fontSize="0.9rem">
+      <ParaWrapper color="black" fontSize="0.9rem" fontWeight="bold">
         {odd}
       </ParaWrapper>
     </HeadingWrapper>
@@ -51,12 +51,12 @@ const HeaderWrapper = styled(FlexDiv)`
 
 const Col1Wrapper = styled(HeaderWrapper)`
   width: 50%;
-  padding-left: 1vw;
+  padding-left: 10px;
   justify-content: flex-start;
 `;
 
 const Col2Wrapper = styled(Col1Wrapper)`
-  padding-right: 1vw;
+  padding-right: 10px;
   justify-content: flex-end;
   gap: 20px;
 `;
