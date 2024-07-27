@@ -3,7 +3,8 @@ import { io } from "socket.io-client";
 
 let FixturesContext = createContext();
 
-// let socket = io('http://localhost:5005');
+// let socket = io("https://cali-server.vercel.app");
+// let socket = io("http://localhost:5005");
 let socket = io("https://cali-server.onrender.com/");
 
 const MyContext = ({ children }) => {
