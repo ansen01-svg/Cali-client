@@ -4,7 +4,7 @@ import { io } from "socket.io-client";
 let FixturesContext = createContext();
 
 // let socket = io("http://localhost:5005");
-let socket = io("https://cali-server.onrender.com/");
+let socket = io("http://ec2-16-171-161-6.eu-north-1.compute.amazonaws.com:5005");
 
 const MyContext = ({ children }) => {
   let [isLoading, setIsLoading] = useState(true);
